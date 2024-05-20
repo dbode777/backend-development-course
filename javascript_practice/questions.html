@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Practice</title>
+</head>
+
+<body>
+    <h1 style="color: blueviolet;">Practice Javascript Questions</h1>
+    <div>
+        <h2>Question 1:</h2>
+        <p>
+            Prompt: Write a simple program that uses both HTML and JavaScript (you can write your JavaScript code
+            directly
+            in your HTML file or by referencing a script). This program should prompt the user to enter a number and
+            tell
+            them if their number is odd or even.
+        </p>
+        <p>
+            Example:
+        </p>
+        <li>Program displays a prompt</li>
+        <li>User enters 3</li>
+        <li>Program shows an alert saying: “Odd”</li>
+        <p>
+            You can use the functions “prompt” and “alert” in your javascript code.
+        </p>
+        <h2>Answer:</h2>
+        <p>
+            <label for="quesstion1-input">Please enter a number:</label>
+            <input type="number" id="question1-input" name="question1-input">
+            <br>
+            <button type="submit" onclick="retrieveInput()">Submit</button>
+        <p id="question1-answer"></p>
+        <script src="question1.js"></script>
+        </p>
+    </div>
+    <div>
+        <h2>Question 2:</h2>
+        <p>
+            Prompt: Write a simple program that uses both HTML and JavaScript (you can write your JavaScript code
+            directly in your HTML file or by referencing a script). This program should ask the user to enter 3 numbers,
+            it should store each of the numbers and tell the user what the largest number they entered was.
+        </p>
+        <p>Example:</p>
+        <li>Program asks for number 1</li>
+        <li>User enters 1</li>
+        <li>Program asks for number 2</li>
+        <li>User enters -3</li>
+        <li>Program asks for number 3</li>
+        <li>User enters -5</li>
+        <li>Program shows an alert saying “The largest number was: 1"</li>
+        <h2>Answer:</h2>
+        <p>Please enter 3 numbers:</p>
+        <input type="number" id="question2-input1" name="question2-input1">
+        <input type="number" id="question2-input2" name="question2-input2">
+        <input type="number" id="question2-input3" name="question2-input3">
+        <button type="submit" onclick="q2RetrieveInput()">Submit</button>
+        <p id="question2-answer"></p>
+        <script src="question2.js"></script>
+    </div>
+</body>
+
+</html>
