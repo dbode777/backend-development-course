@@ -18,59 +18,6 @@ const executeOperation = (number, operation) => {
 };
 
 /**
- * Resets the calculator
- */
-const reset = () => {
-    operator = null;
-    storedValue = "";
-    resultText = "";
-    spanElement.innerHTML = resultText;
-};
-
-/**
- * Rounds result to the nth decimal place
- * @param {number}
- * @param {number} baseTenExponent decimal place you wish to round to
- * @returns {number} The rounded number to the nth decimal place
- */
-const roundResult = (number, decimalPlace) => {
-    return Math.round(number * decimalPlace) / decimalPlace;
-}
-
-/**
- * Conducts operation and returns result to be displayed to the user
- * @param {String} number The user's second input to be used in the operation they selected.
- * @param {String} operation The operation the user would like to conduct
- * @returns {number} The result to be displayed to the user.
- */
-const operate = (number, operation) => {
-    console.log(`Parameters passed to the operate function: ${number}, ${operation}`)
-    switch (operation) {
-        case "+":
-            storedValue = roundResult(storedValue + parseFloat(number), decimalPlace);
-            operator = null;
-            resultText = "";
-            return storedValue;
-        case "-":
-            storedValue = roundResult(storedValue - parseFloat(number), decimalPlace)
-            operator = null;
-            resultText = "";
-            return storedValue;
-        case "x":
-            storedValue = roundResult(storedValue * parseFloat(number), decimalPlace);
-            operator = null;
-            resultText = "";
-            return storedValue;
-        case "/":
-            // Round to nearest billionth
-            storedValue = roundResult(storedValue / parseFloat(number), decimalPlace);
-            operator = null;
-            resultText = "";
-            return storedValue;
-    }
-};
-
-/**
  * Sets the result text element to the number pressed by the user
  * @param {String} number The number to be appended to the text displayed. A decimal can also be entered.
  */
@@ -142,4 +89,51 @@ const onOperationPressed = (operation) => {
         reset();
         return;
     }
+};
+
+/**
+ * Conducts operation and returns result to be displayed to the user
+ * @param {String} number The user's second input to be used in the operation they selected.
+ * @param {String} operation The operation the user would like to conduct
+ * @returns {number} The result to be displayed to the user.
+ */
+const operate = (number, operation) => {
+    console.log(`Parameters passed to the operate function: ${number}, ${operation}`)
+    switch (operation) {
+        case "+":
+            storedValue = roundResult(storedValue + parseFloat(number), decimalPlace);
+            return storedValue;
+        case "-":
+            storedValue = roundResult(storedValue - parseFloat(number), decimalPlace)
+            return storedValue;
+        case "x":
+            storedValue = roundResult(storedValue * parseFloat(number), decimalPlace);
+            return storedValue;
+        case "/":
+            // Round to nearest billionth
+            storedValue = roundResult(storedValue / parseFloat(number), decimalPlace);
+            return storedValue;
+    }
+};
+
+/**
+ * Resets the calculator
+ */
+const reset = () => {
+    operator = null;
+    storedValue = "";
+    resultText = "";
+    spanElement.innerHTML = resultText;
+};
+
+/**
+ * Rounds result to the nth decimal place
+ * @param {number}
+ * @param {number} baseTenExponent decimal place you wish to round to
+ * @returns {number} The rounded number to the nth decimal place
+ */
+const roundResult = (number, decimalPlace) => {
+    operator = null;
+    resultText = "";
+    return Math.round(number * decimalPlace) / decimalPlace;
 };
