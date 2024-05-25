@@ -7,6 +7,11 @@ const q2RetrieveInput = () => {
     arr.push(document.getElementById("question2-input3").value);
     console.log(`Array of user's numbers: ${arr}`);
 
-    document.getElementById("question2-answer").innerHTML = `Out of the numbers you selected ${arr}, the largest number was ${Math.max(...arr)}.`;
-    alert(`The largest number was ${Math.max(...arr)}.`)
+    // Need to properly sanitize/ encode the output to prevent XSS attacks
+    const q2AnswerElement = document.getElementById("question2-answer");
+
+    const message = `Out of the numbers you selected ${arr.join(', ')}, the largest number was ${Math.max(...arr)}.`;
+
+    q2AnswerElement.textContent = message;
+    return alert(`The largest number was ${Math.max(...arr)}.`);
 };
