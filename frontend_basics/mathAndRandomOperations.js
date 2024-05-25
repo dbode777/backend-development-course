@@ -6,10 +6,10 @@ const decimalPlace = base ** n;
 /**
  * Round numbers to the nth decimal place.
  * @param {Number} num The number to round.
- * @param {Int} degree The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
+ * @param {Int} baseTenExponent The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
  */
-const roundedNum = (num, degree) => {
-    round = Math.round(num * (degree)) / (degree);
+const roundedNum = (num, baseTenExponent) => {
+    round = Math.round(num * (baseTenExponent)) / (baseTenExponent);
     console.log(round);
     return round;
 };
@@ -18,10 +18,10 @@ roundedNum(num, decimalPlace);
 /**
  * Round down numbers to the nth decimal place.
  * @param {Number} num The number to round.
- * @param {Int} degree The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
+ * @param {Int} baseTenExponent The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
  */
-const flooredNum = (num, degree) => {
-    floor = Math.floor(num * (degree)) / (degree);
+const flooredNum = (num, baseTenExponent) => {
+    floor = Math.floor(num * (baseTenExponent)) / (baseTenExponent);
     console.log(floor);
     return floor;
 };
@@ -30,10 +30,10 @@ flooredNum(num, decimalPlace);
 /**
  * Round up numbers to the nth decimal place.
  * @param {Number} num The number to round.
- * @param {Int} degree The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
+ * @param {Int} baseTenExponent The decimal place you want to round to. Positive values are to the right of the decimal. Negative values are to the left of the decimal. Default is base 10 for now, but this can be altered if desired.
  */
-const ceiledNum = (num, degree) => {
-    ceil = Math.ceil(num * (degree)) / (degree);
+const ceiledNum = (num, baseTenExponent) => {
+    ceil = Math.ceil(num * (baseTenExponent)) / (baseTenExponent);
     console.log(ceil);
     return ceil;
 };
