@@ -1,6 +1,6 @@
 /**
  * Determines the largest difference of ages for any pair within an array.
- * @param {[[number, number], ...]} agePairs Pair of ages
+ * @param {Array.<[number, number]} agePairs Pair of ages
  * @returns {number} Largest age difference
  */
 const findLargestAgeDifference = (agePairs = []) => {

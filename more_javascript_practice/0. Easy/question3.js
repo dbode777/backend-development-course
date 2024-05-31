@@ -10,6 +10,11 @@ for (let i = a; i < a + 26; i++) {
     };
 };
 
+/**
+ * Counts the number of vowels and consonants contained within a string.
+ * @param {string} inputString initial string to conduct a count on
+ * @returns {object} an object containing a count of the number of vowels, vowelCount, and consonants, consonantCount, for the given input string.
+ */
 const countVowelsAndConsonants = (inputString = "") => {
     let vowelCount = 0;
     let consonantCount = 0;
@@ -37,7 +42,6 @@ const countVowelsAndConsonants = (inputString = "") => {
 };
 
 // Test Cases, comments are expected results
-
 console.log(countVowelsAndConsonants("ProgrammingInJavaScript")) // vowels: 7, consonants: 16
 console.log(countVowelsAndConsonants("ExampleOfMixedCase")) // vowels: 8, consonants: 10
 console.log(countVowelsAndConsonants("FUNCTIONALprogramming")) // vowels: 7, consonants: 14
