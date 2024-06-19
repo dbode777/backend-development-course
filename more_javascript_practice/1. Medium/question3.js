@@ -10,7 +10,6 @@
     }
 }
 */
-// TODO: create an employee class to create the employee objects and place the function within that.
 
 class Employee {
 
