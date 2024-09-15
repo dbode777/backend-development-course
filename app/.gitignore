@@ -19,8 +19,6 @@
 # misc
 .DS_Store
 *.pem
-package.json
-package-lock.json
 
 # debug
 npm-debug.log*
