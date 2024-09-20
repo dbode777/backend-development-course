@@ -1,15 +1,18 @@
+import "./post.css";
+
 export function Post({ title, content, author, following }) {
-    // Check for null pointer references and unhandled exceptions
     if (!title || !content || !author) {
-        throw new Error("Post must have title, content, and author");
-    }
-    // Return a JSX element representing a post
+        throw new Error("Title, content, and author are required");
+    };
+
+    const button = <button> {following ? "UnFollow" : "Follow"} </button>
+
     return (
-        <div>
-            <h1 style={{marginTop: "10px", fontWeight: "bold", fontSize: "30px"}} className='title'>{title}</h1>
-            <p style={{fontStyle: "italic"}} className="content">{content}</p>
+        <div className="card">
+            <h1 className="title">{title}</h1>
+            <p className="content">{content}</p>
             <h3>By: {author}</h3>
-                <button> {following ? "UnFollow" : "Follow"} </button>
+            { button }
             <p>{new Date().toDateString()}</p>
         </div>
     );

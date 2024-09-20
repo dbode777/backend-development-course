@@ -1,0 +1,17 @@
+.card {
+    border-radius: 10px;
+    border-color: rgb(133, 198, 255);
+    border-width: 5px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.content {
+    font-style: italic;
+}
