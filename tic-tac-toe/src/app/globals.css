@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Geo:ital@0;1&family=Nabla&display=swap');
+
+
+body {
+  margin: 10px;
+  background-color: #decfcf;
+}
+
+.square {
+  background: linear-gradient(to left, #bbc93b, #e9e7e0, #bbc93b);
+  border: 1px solid #999;
+  float: left;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-right: -1px;
+  margin-top: -1px;
+
+  text-align: center;
+  font-size: 84px;
+  font-weight: bold;
+  color: #816a21;
+  text-shadow: 
+    -3px 4px 4px rgba(255, 255, 255, 0.9), /* Top left highlight */
+    2px 2px 2px rgba(0, 0, 0, 0.5), 
+    -1px 1px 2px rgba(0, 0, 0, 0.5),
+    1px -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.board-row {
+  display: flex;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container styles */
+.container {
+  background: linear-gradient(to right, #3b82f6, #a855f7, #a004e3); /* Gradient from blue-500, via-purple-500, to-pink-500 */
+  padding: 1rem;
+  text-align: center; /* Centers text horizontally */
+  width: 100%;
+}
+
+/* Title styles */
+.title {
+  font-size: 2.25rem; /* Equivalent to text-4xl */
+  font-weight: 800; /* Equivalent to font-extrabold */
+  font-family: "Baskerville SC", serif;
+  color: white; /* Equivalent to text-white */
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Equivalent to drop-shadow-lg */
+}
+
+/* Responsive Title for medium screens */
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem; /* Equivalent to md:text-6xl */
+  }
+}
+
+/* Heading styles */
+.header1 {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  font-family: monospace;
+  color: white; /* Equivalent to text-white */
+  opacity: 0.9; /* Equivalent to opacity-90 */
+  margin-top: 1rem; /* Equivalent to mt-4 */
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Equivalent to drop-shadow-md */
+  text-align: justify;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.header2 {
+  font-size: 2.5rem;
+  font-family: "Geo", sans-serif;
+  color: rgb(231, 181, 251); /* Equivalent to text-white */
+  opacity: 0.9; /* Equivalent to opacity-90 */
+  margin-top: 1rem; /* Equivalent to mt-4 */
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Equivalent to drop-shadow-md */
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.game-info {
+  /* Container styling */
+  display: flex;
+  background: #f2de9c;
+  border: 1px;
+  width: 32%;
+  padding: 1rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Text styling */
+  font-family: "Nabla", serif;
+  color: rgb(32, 25, 46); /* Equivalent to text-white */
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Equivalent to drop-shadow-md */
+  text-align: center;
+}
+
+/* Responsive Subtitle for medium screens */
+@media (min-width: 768px) {
+  .header1 {
+    font-size: 1.25rem; /* Equivalent to md:text-xl */
+  }
+  .header2 {
+    font-size: 2.5rem; /* Equivalent to md:text-xl */
+  }
+  .game-info {
+    font-size: 1.5rem; /* Equivalent to md:text-2xl */
+  }
+}
+
+/* Restart button Styles */
+.restart {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and active transitions */
+}
+
+/* Hover State */
+.restart:hover {
+  background-color: #a64ec6;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active State */
+.restart:active {
+  transform: translateY(0.25rem); /* Tailwind's active:translate-y-1 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
