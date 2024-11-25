@@ -19,7 +19,7 @@
 # misc
 .DS_Store
 *.pem
-.gitignore
+*.gitignore
 
 # debug
 npm-debug.log*
