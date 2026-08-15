@@ -52,23 +52,26 @@ console.log(`This is the result of the filter function: ${filter_result}`);
  * @param {Function} func a function to will be used to reduce the elements of arr to a single value.
  * @returns {} The reduced value.
  */
-const reduce = (arr, func) => {
-    for (const value of arr) {
-        var currentResult = func(currentResult, value);
+const reduce = (arr, func, initialValue) => {
+    if (arr.length < 2) return initialValue;
+
+    let accumulator = initialValue !== undefined ? initialValue : arr[0];
+    let startIndex = initialValue !== undefined ? 0 : 1;
+
+    for (let i = startIndex; i < arr.length; i++) {
+        accumulator = func(accumulator, arr[i]);
     }
 
-    return currentResult;
+    return accumulator;
 };
 
 // This is the equivalent of using arr.reduce((prev_element = defaultPrevValue, current_element = defaultCurrentValue) => function)
-const reduced_result = reduce(arr, (x, y) => x + y);
+const reduced_result = reduce(arr, (x, y) => x + y, 0);
 console.log(`This is the result of the reduced function: ${reduced_result}`);
 
 // Let's see what happens if the arr has a fewer number of elements than the number of arguments for func (for science).
 
 const small_arr = [1];
 
-const reduced_result_default = reduce(small_arr, (x, y) => x + y);
+const reduced_result_default = reduce(small_arr, (x, y) => x + y, 0);
 console.log(`This is the default result of the reduced function: ${reduced_result_default}`);
-
-// If the argument doesn't exist (i.e. the second element of small_arr), it sets the non-existent parameter to NaN.
