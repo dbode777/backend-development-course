@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --coverage ./test",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint": "^8.57.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.25.1",
+    "eslint": "^8.57.1",
+    "jest": "30.0"
+  }
+}
