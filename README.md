@@ -6,4 +6,4 @@ Work conducted for the CourseCareers courses. I'll use this repository to improv
 For other portions of this repository (such as the API development sections of these courses), I will work to setup a YAML file that will define a CICD pipeline for my proected branches and feature branches.
 
 ## Background of Courses and Work Completed/To Be Completed
-The first course, Software Development Fundamentals, is primarily used to both reinforce the skills I have already learned as an associate software developer, refine my habits as a developer as a whole, and learn optimal patterns to improve as a full-stack developer. Languages learned during this course included Javascript (Node.js and React.js), Typescript, Go, and HTML/CSS.
+The first course, Software Development Fundamentals, is primarily used to both reinforce the skills I have already learned as an associate software developer, refine my habits as a developer as a whole, and learn optimal patterns to improve as a full-stack developer. Languages learned during this course included Javascript (Node.js, Next.js and React.js), Typescript, Go, and HTML/CSS.
